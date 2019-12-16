@@ -5,6 +5,7 @@ const Player = props =>{
         <div className="player" data-testid="player">
             <h2>{props.name}</h2>
             <h3>Country: {props.country}</h3>
+            <h4>Appeared in {props.searches} searches</h4>
         </div>
     );
 };

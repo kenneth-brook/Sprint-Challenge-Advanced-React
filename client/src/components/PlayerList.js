@@ -6,7 +6,7 @@ const PlayerList = props => {
         <div className="playerList">
         {props.list.map(person => {
             return(
-                <Player key={person.id} name={person.name} country={person.country} />
+                <Player key={person.id} name={person.name} country={person.country} searches={person.searches}/>
             );
         })}
         </div>

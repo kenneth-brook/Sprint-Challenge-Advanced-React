@@ -3,7 +3,7 @@ import axios from "axios";
 import './App.css';
 import Navbar from "./components/Navbar.js";
 import PlayerList from "./components/PlayerList.js";
-// import "@testing-library/jest-dom";
+import "@testing-library/jest-dom";
 
 
 class App extends React.Component {
@@ -23,7 +23,8 @@ class App extends React.Component {
         list: res.data,
         name: res.data.name,
         id: res.data.id,
-        country: res.data.country
+        country: res.data.country,
+        searches: res.data.searches
       });
     })
     .catch(err => console.log(err));
@@ -46,6 +47,7 @@ class App extends React.Component {
         id={this.state.id}
         country={this.state.country}
         list={this.state.list}
+        searches={this.state.searches}
         />
       </div>
     );
